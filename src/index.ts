@@ -1,4 +1,5 @@
 import { EnglishCommentry } from "./commentry/EnglishCommentry";
+import { MarathiCommentry } from "./commentry/MarathiCommentry";
 import { Match } from "./match/Match";
 import { Goalkeeper } from "./players/Goalkeeper";
 import { Midfielder } from "./players/Midfielder";
@@ -19,7 +20,7 @@ pune.addPlayer(puneStriker);
 pune.addPlayer(new Midfielder("Ganesh", 89));
 pune.addPlayer(new Goalkeeper("Ramesh", 77));
 
-const commentry = new EnglishCommentry();
+const commentry = new MarathiCommentry();
 
 const match = new Match(mumbai, pune, commentry);
 
