@@ -15,9 +15,9 @@ export class HindiCommentry implements ICommentry{
     pass(from: Player, to: Player): void {
         console.log(`${from.getName()} ${to.getName()} को पास करता है!`);
     }
-    matchEnded(teamA: Team, teamB: Team): void {
+    matchEnded(teamA: Team, teamB: Team, scoreA:number, scoreB: number): void {
         console.log(`${teamA.getName()} और ${teamB.getName()} के बीच का मैच समाप्त हो गया है!`);
-        console.log(`अंतिम स्कोर: ${teamA.getName()} ${teamA.getScore()} - ${teamB.getScore()} ${teamB.getName()}`);
+        console.log(`अंतिम स्कोर: ${teamA.getName()} ${scoreA} - ${scoreB} ${teamB.getName()}`);
     }
     
 }

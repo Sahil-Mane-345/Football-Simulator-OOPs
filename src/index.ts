@@ -15,6 +15,7 @@ mumbai.addPlayer(new Midfielder("Rahul", 8));
 mumbai.addPlayer(new Goalkeeper("Suresh", 1));
 
 const pune = new Team("Pune");
+
 const puneStriker = new Striker("Rohit", 9);
 pune.addPlayer(puneStriker);
 pune.addPlayer(new Midfielder("Ganesh", 89));

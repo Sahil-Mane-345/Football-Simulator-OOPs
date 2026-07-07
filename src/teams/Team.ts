@@ -2,7 +2,6 @@ import { Player } from "../players/Player"
 
 export class Team{
     private players: Player[] = [];
-    private score: number = 0;  
 
     constructor(
         private readonly name: string,
@@ -18,14 +17,6 @@ export class Team{
 
     public getPlayers(): Player[]{
         return this.players;
-    }
-
-    public getScore(): number{
-        return this.score;
-    }
-
-    public addGoal(): void{
-        this.score++;
     }
 
 }

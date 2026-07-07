@@ -23,4 +23,6 @@ export abstract class Player{
     public celebrate(): void{
         console.log(`${this.name} is celebrating`);
     }
+    
+    public abstract play(): void;
 }

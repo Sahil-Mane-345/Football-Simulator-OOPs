@@ -15,9 +15,9 @@ export class EnglishCommentry implements ICommentry{
     pass(from: Player, to: Player): void {
         console.log(`${from.getName()} passes to ${to.getName()}!`);
     }
-    matchEnded(teamA: Team, teamB: Team): void {
+    matchEnded(teamA: Team, teamB: Team, scoreA:number, scoreB: number): void {
         console.log(`The match between ${teamA.getName()} and ${teamB.getName()} has ended!`);
-        console.log(`Final Score: ${teamA.getName()} ${teamA.getScore()} - ${teamB.getScore()} ${teamB.getName()}`);
+        console.log(`Final Score: ${teamA.getName()} ${scoreA} - ${scoreB} ${teamB.getName()}`);
     }
     
 }

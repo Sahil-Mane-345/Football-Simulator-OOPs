@@ -15,9 +15,9 @@ export class MarathiCommentry implements ICommentry{
     pass(from: Player, to: Player): void {
         console.log(`${from.getName()} हे ${to.getName()} यांना पास करतात!`);
     }
-    matchEnded(teamA: Team, teamB: Team): void {
+    matchEnded(teamA: Team, teamB: Team, scoreA:number, scoreB: number): void {
         console.log(`हे ${teamA.getName()} आणि ${teamB.getName()} यांच्यातील मैच समाप्त झाले आहे!`);
-        console.log(`अंतिम स्कोर: ${teamA.getName()} ${teamA.getScore()} - ${teamB.getScore()} ${teamB.getName()}`);
+        console.log(`अंतिम स्कोर: ${teamA.getName()} ${scoreA} - ${scoreB} ${teamB.getName()}`);
     }
     
 }

@@ -10,5 +10,5 @@ export interface ICommentry{
 
     pass(from:Player, to:Player): void;
 
-    matchEnded(teamA: Team, teamB: Team): void;
+    matchEnded(teamA: Team, teamB: Team, scoreA:number, scoreB:number): void;
 }
