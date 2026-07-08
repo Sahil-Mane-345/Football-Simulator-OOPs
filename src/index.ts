@@ -1,4 +1,6 @@
+import { CommentryFactory } from "./commentry/CommentryFactory";
 import { EnglishCommentry } from "./commentry/EnglishCommentry";
+import { HindiCommentry } from "./commentry/HindiCommentry";
 import { MarathiCommentry } from "./commentry/MarathiCommentry";
 import { Match } from "./match/Match";
 import { Goalkeeper } from "./players/Goalkeeper";
@@ -21,26 +23,31 @@ pune.addPlayer(puneStriker);
 pune.addPlayer(new Midfielder("Ganesh", 89));
 pune.addPlayer(new Goalkeeper("Ramesh", 77));
 
-const commentry = new MarathiCommentry();
+const commentry = new CommentryFactory();
+
+commentry.addCommentry(new HindiCommentry());
+commentry.addCommentry(new MarathiCommentry());
+commentry.addCommentry(new EnglishCommentry());
+
 
 const match = new Match(mumbai, pune, commentry);
 
 match.start();
 
 setTimeout(()=>{
-    match.goal(mumbaiStriker, mumbai);
+    match.goalByTeamA(mumbaiStriker);
 }, 2000);
 
 setTimeout(()=>{
-    match.goal(puneStriker, pune);
+    match.goalByTeamB(puneStriker);
 }, 4000);
 
 setTimeout(()=>{
-    match.goal(mumbaiStriker, mumbai);
+    match.goalByTeamA(mumbaiStriker);
 }, 6000);
 
 setTimeout(()=>{
-    match.goal(mumbaiStriker, mumbai);
+    match.goalByTeamA(mumbaiStriker);
 }, 8000);
 
 
