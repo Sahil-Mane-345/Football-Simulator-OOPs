@@ -1,15 +1,15 @@
 export abstract class Player{
     constructor(
         protected readonly name: string,
-        protected readonly number: number,
+        protected readonly jerseyNumber: number,
     ){}
 
     public getName(): string{
         return this.name;
     }
 
-    public getNumber(): number{
-        return this.number;
+    public getJerseyNumber(): number{
+        return this.jerseyNumber;
     }
 
     public run(): void{

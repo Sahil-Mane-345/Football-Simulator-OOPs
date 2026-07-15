@@ -1,4 +1,4 @@
-import { CommentryFactory } from "./commentry/CommentryFactory";
+import { CommentryBroadcaster } from "./commentry/CommentryBroadcaster";
 import { EnglishCommentry } from "./commentry/EnglishCommentry";
 import { HindiCommentry } from "./commentry/HindiCommentry";
 import { MarathiCommentry } from "./commentry/MarathiCommentry";
@@ -23,14 +23,14 @@ pune.addPlayer(puneStriker);
 pune.addPlayer(new Midfielder("Ganesh", 89));
 pune.addPlayer(new Goalkeeper("Ramesh", 77));
 
-const commentry = new CommentryFactory();
+const commentryBroadcaster = new CommentryBroadcaster();
 
-commentry.addCommentry(new HindiCommentry());
-commentry.addCommentry(new MarathiCommentry());
-commentry.addCommentry(new EnglishCommentry());
+commentryBroadcaster.addCommentry(new HindiCommentry());
+commentryBroadcaster.addCommentry(new MarathiCommentry());
+commentryBroadcaster.addCommentry(new EnglishCommentry());
 
 
-const match = new Match(mumbai, pune, commentry);
+const match = new Match(mumbai, pune, commentryBroadcaster);
 
 match.start();
 
