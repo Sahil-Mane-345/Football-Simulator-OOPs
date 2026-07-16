@@ -18,6 +18,13 @@ export class HindiCommentry implements ICommentry{
     matchEnded(teamA: Team, teamB: Team, scoreA:number, scoreB: number): void {
         console.log(`${teamA.getName()} और ${teamB.getName()} के बीच का मैच समाप्त हो गया है!`);
         console.log(`अंतिम स्कोर: ${teamA.getName()} ${scoreA} - ${scoreB} ${teamB.getName()}`);
+        if(scoreA > scoreB){
+            console.log(`मैच ${teamA.getName()} ने जीता`);
+        }else if(scoreB > scoreA ){
+            console.log(`मैच ${teamB.getName()} ने जीत लिया है`);
+        }else{
+            console.log(`${teamA.getName()} और ${teamB.getName()} के बीच का मैच ड्रॉ रहा`);
+        }
     }
     
 }

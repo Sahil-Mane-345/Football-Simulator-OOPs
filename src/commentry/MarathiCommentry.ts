@@ -18,6 +18,13 @@ export class MarathiCommentry implements ICommentry{
     matchEnded(teamA: Team, teamB: Team, scoreA:number, scoreB: number): void {
         console.log(`हे ${teamA.getName()} आणि ${teamB.getName()} यांच्यातील मैच समाप्त झाले आहे!`);
         console.log(`अंतिम स्कोर: ${teamA.getName()} ${scoreA} - ${scoreB} ${teamB.getName()}`);
+        if(scoreA > scoreB){
+            console.log(`${teamA.getName()} सामन्यांमध्ये जिंकलेले आहे `);
+        }else if(scoreB > scoreA ){
+            console.log(`${teamB.getName()}  सामन्यांमध्ये जिंकलेले आहे `);
+        }else{
+            console.log(`${teamA.getName()} आणि ${teamB.getName()} यांच्यातील सामना ड्रा झाला आहे`);
+        }
     }
     
 }

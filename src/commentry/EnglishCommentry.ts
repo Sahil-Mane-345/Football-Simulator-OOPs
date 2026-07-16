@@ -18,6 +18,13 @@ export class EnglishCommentry implements ICommentry{
     matchEnded(teamA: Team, teamB: Team, scoreA:number, scoreB: number): void {
         console.log(`The match between ${teamA.getName()} and ${teamB.getName()} has ended!`);
         console.log(`Final Score: ${teamA.getName()} ${scoreA} - ${scoreB} ${teamB.getName()}`);
+        if(scoreA > scoreB){
+            console.log(`The match is won by ${teamA.getName()}`);
+        }else if(scoreB > scoreA ){
+            console.log(`The match is won by ${teamB.getName()}`);
+        }else{
+            console.log(`The match between ${teamA.getName()} & ${teamB.getName()} is draw `);
+        }
     }
     
 }
